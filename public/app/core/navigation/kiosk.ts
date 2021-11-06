@@ -1,6 +1,5 @@
-import { AppEvents, UrlQueryValue } from '@grafana/data';
+import { UrlQueryValue } from '@grafana/data';
 import { locationService } from '@grafana/runtime';
-import appEvents from '../app_events';
 import { KioskMode } from '../../types';
 
 export function toggleKioskMode() {
@@ -9,7 +8,7 @@ export function toggleKioskMode() {
   switch (kiosk) {
     case 'tv':
       kiosk = true;
-      appEvents.emit(AppEvents.alertSuccess, ['Press ESC to exit Kiosk mode']);
+      // appEvents.emit(AppEvents.alertSuccess, ['Press ESC to exit Kiosk mode']);
       break;
     case '1':
     case true:
